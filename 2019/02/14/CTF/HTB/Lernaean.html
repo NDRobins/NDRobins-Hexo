@@ -1,0 +1,7 @@
+<hr>
+<p>title: Lernaean<br>p: /CTF/HTB/Lernaean<br>date: 2019-02-14 23:53:05</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>{% asset_img login.jpg login %}<br>This test taught me how to use the burpsuite and hydra tools.<br>Upon loading the page im faced with a login form without a username field.<br>The challenge was to get past the login screen in order to get the flag.<br>After watching a video tutorial on how to use hydra and burpsuite (on a different ctf), I felt ready to take on Lernaean. </p>
+<p>I set up burpsuite to intercept the packets and sent an incorrect password for the sample packet.<br>Then I turned off the interception and set up hydra using the following command:<br>hydra -V -l admin -P /usr/share/wordlists/rockyou.txst docker.hackthebox.eu http-post-form “/:password=^PASS^:F=Invalid password!” -s 33625</p>
+<p>{% asset_img hydra.png hydra %}</p>
+<p>Hydra spat out the password shortly after that: leonardo.<br>Attempting to use it on the login page presents me with a new page stating that I was too slow.<br>I was quite confused at this stage and had to consult the internet for help. A reddit post where<br>someone was stuck on the same part. The internet was helpful without just giving away the answer completely. The suggestions hinted that we should use the repeater function of burpsuite to constantly send the login packet and that is exactly what I did. Shortly after, I get a response with the flag in it.</p>
+<p>{% asset_img flag.png flag %}</p>

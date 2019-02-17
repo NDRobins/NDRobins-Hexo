@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Lernaean | NDRobins - Cyber Security</title>
+  <meta name="author" content="John Doe">
+
+  
+  <meta name="description" content="This test taught me how to use the burpsuite and hydra tools.Upon loading the page im faced with a login form without a username field.The challenge w">
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Lernaean">
+  <meta property="og:site_name" content="NDRobins - Cyber Security">
+
+  
+  
+
+  
+    <meta property="og:image" content="">
+  
+
+  
+  <link href="https://images3.wikia.nocookie.net/__cb20110406222713/seinfeld/images/7/76/George-costanza.jpg" rel="icon">
+  
+
+  <link rel="alternate" href="/atom.xml" title="NDRobins - Cyber Security" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+
+</head>
+</html>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">NDRobins - Cyber Security</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/_posts/CTF">CTF</a></li>
+    
+      <li><a href="/_posts/Reflections">Reflections</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2019-02-14T12:53:05.000Z"><a href="/2019/02/14/CTF/HTB/Lernaean/">2019-02-14</a></time>
+      
+      
+  
+    <h1 class="title">Lernaean</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+<p>This test taught me how to use the burpsuite and hydra tools.<br>Upon loading the page im faced with a login form without a username field.<br>The challenge was to get past the login screen in order to get the flag.<br>After watching a video tutorial on how to use hydra and burpsuite (on a different ctf), I felt ready to take on Lernaean. </p>
+<p>I set up burpsuite to intercept the packets and sent an incorrect password for the sample packet.<br>Then I turned off the interception and set up hydra using the following command:<br>hydra -V -l admin -P /usr/share/wordlists/rockyou.txst docker.hackthebox.eu http-post-form “/:password=^PASS^:F=Invalid password!” -s 33625</p>
+
+<p>Hydra spat out the password shortly after that: leonardo.<br>Attempting to use it on the login page presents me with a new page stating that I was too slow.<br>I was quite confused at this stage and had to consult the internet for help. A reddit post where<br>someone was stuck on the same part. The internet was helpful without just giving away the answer completely. The suggestions hinted that we should use the repeater function of burpsuite to constantly send the login packet and that is exactly what I did. Shortly after, I get a response with the flag in it.</p>
+
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ndrobins.me">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Reflections/">Reflections</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2019/02/16/CTF/HTB/HDC/">post</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/15/CTF/HTB/Cartographer/">Cartographer</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/14/CTF/HTB/Lernaean/">Lernaean</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/14/CTF/">CTF</a>
+      </li>
+    
+      <li>
+        <a href="/2019/02/14/CTF/HTB/">HTB</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Reflections/">Reflections</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Tag Cloud</h3>
+  <div class="entry">
+    <a href="/tags/Reflections/" style="font-size: 10px;">Reflections</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2019 John Doe
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id="bg"></div>
+</body>
+</html>
