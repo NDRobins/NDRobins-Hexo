@@ -72,7 +72,7 @@
       
       
   
-    <h1 class="title"><a href="/2019/02/24/Reflection_Posts/Week-3/">page</a></h1>
+    <h1 class="title"><a href="/2019/02/24/Reflection_Posts/Week-3/">Week 3</a></h1>
   
 
     </header>
@@ -108,6 +108,11 @@
         </div>
         
         
+  
+  <div class="tags">
+    <a href="/tags/Reflections/">Reflections</a>
+  </div>
+
         <!-- partial('post/share') -->
       <div class="clearfix"></div>
     </footer>
@@ -285,7 +290,7 @@
     </header>
     <div class="entry">
       
-        <p>I took on cartographer right after completing lernaean so I had the same process in my mind.<br>I captured a sample packet, formed a hydra command and set it loose. The trouble with that is that it was the wrong way to solve it and there was no failure flag for hydra to use. So after realising that I was going to get nowhere like that I investigated how the website worked. I found out that the login form was weak to sql injection so I put in an always true statement and was presented a page saying that cartographer was still in construction.<br>From here I noticed that the url had a query after it: ?info=home.<br>Going out on a limb i changed the home to flag and was given the flag i was after.<br><img src="/2019/02/15/CTF_Posts/HTB/Cartographer/flag.png" title="flag"></p>
+        <p>I took on cartographer right after completing lernaean so I had the same process in my mind.<br>I captured a sample packet, formed a hydra command and set it loose. The trouble with that is that it was the wrong way to solve it and there was no failure flag for hydra to use. So after realising that I was going to get nowhere like that I investigated how the website worked. I found out that the login form was weak to sql injection so I put in an always true statement and was presented a page saying that cartographer was still in construction.<br>From here I noticed that the url had a query after it: ?info=home.<br>Going out on a limb i changed the home to flag and was given the flag i was after.<br></p>
 
       
     </div>
@@ -318,7 +323,7 @@
     </header>
     <div class="entry">
       
-        <img src="/2019/02/14/CTF_Posts/HTB/Lernaean/login.jpg" title="login">
+        
 <p>This test taught me how to use the burpsuite and hydra tools.<br>Upon loading the page im faced with a login form without a username field.<br>The challenge was to get past the login screen in order to get the flag.<br>After watching a video tutorial on how to use hydra and burpsuite (on a different ctf), I felt ready to take on Lernaean. </p>
 <p>I set up burpsuite to intercept the packets and sent an incorrect password for the sample packet.<br>Then I turned off the interception and set up hydra using the following command:<br>hydra -V -l admin -P /usr/share/wordlists/rockyou.txst docker.hackthebox.eu http-post-form “/:password=^PASS^:F=Invalid password!” -s 33625</p>
 
@@ -493,7 +498,7 @@
   <ul class="entry">
     
       <li>
-        <a href="/2019/02/24/Reflection_Posts/Week-3/">page</a>
+        <a href="/2019/02/24/Reflection_Posts/Week-3/">Week 3</a>
       </li>
     
       <li>
@@ -521,7 +526,7 @@
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
-    <li><a href="/tags/Reflections/">Reflections</a><small>2</small></li>
+    <li><a href="/tags/Reflections/">Reflections</a><small>3</small></li>
   
   </ul>
 </div>
