@@ -79,7 +79,7 @@
     </header>
     <div class="entry">
       
-        
+        <img src="/2019/02/14/CTF_Posts/HTB/Lernaean/login.jpg" title="login">
 <p>This test taught me how to use the burpsuite and hydra tools.<br>Upon loading the page im faced with a login form without a username field.<br>The challenge was to get past the login screen in order to get the flag.<br>After watching a video tutorial on how to use hydra and burpsuite (on a different ctf), I felt ready to take on Lernaean. </p>
 <p>I set up burpsuite to intercept the packets and sent an incorrect password for the sample packet.<br>Then I turned off the interception and set up hydra using the following command:<br>hydra -V -l admin -P /usr/share/wordlists/rockyou.txst docker.hackthebox.eu http-post-form “/:password=^PASS^:F=Invalid password!” -s 33625</p>
 
@@ -125,6 +125,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2019/02/24/Reflection_Posts/Week-3/">page</a>
+      </li>
+    
+      <li>
         <a href="/2019/02/17/Warning/">Warning</a>
       </li>
     
@@ -138,10 +142,6 @@
     
       <li>
         <a href="/2019/02/16/CTF_Posts/HTB/HDC/">HDC</a>
-      </li>
-    
-      <li>
-        <a href="/2019/02/15/CTF_Posts/HTB/Cartographer/">Cartographer</a>
       </li>
     
   </ul>

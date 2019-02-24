@@ -68,6 +68,59 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2019-02-24T06:52:03.000Z"><a href="/2019/02/24/Reflection_Posts/Week-3/">2019-02-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2019/02/24/Reflection_Posts/Week-3/">page</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Week 3 in review</p>
+<h2>Engage with stakeholders to identify a problem</h2> 
+
+<img src="/2019/02/24/Reflection_Posts/Week-3/chaos.png" title="chaos">
+<p>This last week has had its fair share of challenges and problems while at the same time being extremely fun and informative. My personal challenge for this week was to complete a boot2root on a HackTheBox active machine as there are no hints or walkthroughs to help me get through them. The machine i went with was the HTB Chaos machine as it had been recommended to me by David who had beaten it just before. The challenge had its share of traps and rabbitholes and it seems I went down every one (details coming in the writeup).</p>
+<img src="/2019/02/24/Reflection_Posts/Week-3/root.png" title="root">
+<h2>Apply design thinking to respond to a defined or newly identified problem</h2>
+
+<p>The Chaos box required me to learn new ways to approach CTF challenges. Previous CTF’s left me searching for something obvious that stood out like a sore thumb (details left out due to HTB policies). Enumeration was both a blessing and a curse as the box would hide the next step quite deep but if you didnt find it you can spend hours searching like I did. The box also demanded that I develop new skills to move through it, for example I had to learn IMAP terminal commands (almost no information on the web), priv escalation of shells, moving from a docker reverse shell to a restricted bash shell and on to a full shell. </p>
+<img src="/2019/02/24/Reflection_Posts/Week-3/email.png" title="email">
+<h2>Apply technical skills to develop, model and/or evaluate design</h2>
+
+<p>Both the piper box which I managed to get user but not root in, and the chaos box that I barely managed to scrape through, were interesting tasks that provoked a new approach to these challenges. Through them I have developed a better sense for enumeration, google-fu skills and forcing myself to go forward even though I was ready to give up. I have learned how to get reverse shells and use priv esc to get more control on the target as well as improve the shell quality once established. Learning the IMAP terminal commands was an absolute pain as the only information easily available is found on a single unrelated page deep in the documentation.</p>
+<h2>Demonstrate effective collaboration and communication skills</h2>
+
+<img src="/2019/02/24/Reflection_Posts/Week-3/beef.png" title="beef">
+<p>One of the deliverables due this week was a presentation on an infosec tool of our choice. For the presentation, our group selected the swiss army knife program that is Beef. We started looking into Beef on Tuesday night as we had all been busy up until that point. We initially were just looking into how the tool works and how it can be applied but that soon escalated once I began testing out Beef myself. Once I got it working the way it was intended (script embedded on a website to hook visitors), we were amazed by the amount of power that the program had over the hooked browser. </p>
+<img src="/2019/02/24/Reflection_Posts/Week-3/webcam.png" title="webcam">
+<h2>Conduct critical self and peer review and performance evaluation</h2>
+
+<p>This week really showed me my progress and improvement over what I was going into this course.<br>I have developed a lot more skills and have become much more capable even though I fell like I have only just scratched the surface. Beating the HTB Chaos machine feels like a huge milestone as it is my first full boot2root on a serious challenge; Although only having completed one machine this week is a bit of a letdown as it feels like im falling behind. I hope that going forward I’m able to develop my skills such that I can breeze through challenges like these.</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2019-02-17T12:58:31.000Z"><a href="/2019/02/17/Warning/">2019-02-17</a></time>
       
       
@@ -232,7 +285,7 @@
     </header>
     <div class="entry">
       
-        <p>I took on cartographer right after completing lernaean so I had the same process in my mind.<br>I captured a sample packet, formed a hydra command and set it loose. The trouble with that is that it was the wrong way to solve it and there was no failure flag for hydra to use. So after realising that I was going to get nowhere like that I investigated how the website worked. I found out that the login form was weak to sql injection so I put in an always true statement and was presented a page saying that cartographer was still in construction.<br>From here I noticed that the url had a query after it: ?info=home.<br>Going out on a limb i changed the home to flag and was given the flag i was after.<br></p>
+        <p>I took on cartographer right after completing lernaean so I had the same process in my mind.<br>I captured a sample packet, formed a hydra command and set it loose. The trouble with that is that it was the wrong way to solve it and there was no failure flag for hydra to use. So after realising that I was going to get nowhere like that I investigated how the website worked. I found out that the login form was weak to sql injection so I put in an always true statement and was presented a page saying that cartographer was still in construction.<br>From here I noticed that the url had a query after it: ?info=home.<br>Going out on a limb i changed the home to flag and was given the flag i was after.<br><img src="/2019/02/15/CTF_Posts/HTB/Cartographer/flag.png" title="flag"></p>
 
       
     </div>
@@ -265,7 +318,7 @@
     </header>
     <div class="entry">
       
-        
+        <img src="/2019/02/14/CTF_Posts/HTB/Lernaean/login.jpg" title="login">
 <p>This test taught me how to use the burpsuite and hydra tools.<br>Upon loading the page im faced with a login form without a username field.<br>The challenge was to get past the login screen in order to get the flag.<br>After watching a video tutorial on how to use hydra and burpsuite (on a different ctf), I felt ready to take on Lernaean. </p>
 <p>I set up burpsuite to intercept the packets and sent an incorrect password for the sample packet.<br>Then I turned off the interception and set up hydra using the following command:<br>hydra -V -l admin -P /usr/share/wordlists/rockyou.txst docker.hackthebox.eu http-post-form “/:password=^PASS^:F=Invalid password!” -s 33625</p>
 
@@ -440,6 +493,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2019/02/24/Reflection_Posts/Week-3/">page</a>
+      </li>
+    
+      <li>
         <a href="/2019/02/17/Warning/">Warning</a>
       </li>
     
@@ -453,10 +510,6 @@
     
       <li>
         <a href="/2019/02/16/CTF_Posts/HTB/HDC/">HDC</a>
-      </li>
-    
-      <li>
-        <a href="/2019/02/15/CTF_Posts/HTB/Cartographer/">Cartographer</a>
       </li>
     
   </ul>
